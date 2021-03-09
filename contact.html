@@ -1,0 +1,149 @@
+<!doctype html>
+
+
+<html>
+ 
+<html lang="en"> 
+ 
+ <head>
+ 
+<title> Contact </title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"> 
+<meta name="viewport" content="width=device,inital-scale=1">
+<link rel="stylesheet" type="text/css" href="responsive-layout.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+ </head>
+ 
+ 
+ <body>
+ <header>
+
+
+	<div class="nav-bar">
+		<div class="nav-logo"></div>
+		<img src="images/logo5.jpg" alt="Leannes Scented Candles Dublin Ireland">
+		<div class="nav-links" id="nav-links">
+			<i class="fa fa-close" onclick="closeMenu()"></i>
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+				<li><a href="candles.html">CANDLES</a></li>
+				<li><a href="#">INCENSE</a></li>
+				<li><a href="contact.html">CONTACT US</a></li>
+			</ul>
+		</div>
+		</div>
+		
+	
+
+<div class="contact-container">
+ <div style="text-align:center">
+ <h2>Contact Us</h2>
+ <p>Swing by for a cup of coffee, or leave us a message:</p>
+ </div>
+ <div class="row">
+ <div class="column column50"> <!--1st column -->
+ 
+ <iframe src="https://maps.google.com/maps?q=Rathmines%20College&t=&z=13&ie=UTF8&iwloc=&output=embed" style="width:100%; height:500px"></iframe>
+ 
+ 
+<!--replace this area later with map code -->
+ </div>
+  <div class="column column50"> <!--2nd column -->
+	 <form name="contactForm" id="contactForm" method="post" action="contactServlet" onsubmit="return checkForm()">
+	 <label for="fname">Name <span class="red">*</span></label>
+	 <!--Challenge - Make the asterix red !-->
+	 
+	 <input type="text" id="fname" name="firstname" placeholder="Your name..">
+	 
+	 <label for="email">Email</label>
+	 <input type="text" id="email" name="email" placeholder="Your email address..">
+	 
+	 <label for="subject">Subject</label>
+	 <input type="text" id="subject" name="subject" placeholder="Subject..">
+	 
+	 <label for="message">Message</label>
+	 <textarea id="message" name="message" placeholder="Write something.." style="height:170px"></textarea>
+	 <input type="submit" value="Submit">
+	 </form>
+	 </div>
+	 
+ </div>
+ </div>
+
+
+
+<footer> &copy; Copyright 2021 Leannes Scented Candles.ie
+
+<div class="social-icons">
+		<a href="https://www.youtube.com/" target="_blank" class="fa fa-youtube">
+		
+		</a>
+		<a href="https://www.facebook.com/marketplace/?_rdc=2" target="_blank" class="fa fa-facebook">
+		
+		</a>
+		<a href="https://www.instagram.com/?hl=en" target="_blank" class="fa fa-instagram">
+		
+		</a>
+		<a href="https://twitter.com/?lang=en" target="_blank" class="fa fa-twitter">
+		
+		</a>
+	</div>
+
+
+</footer>
+ 
+
+
+	<script>
+function checkForm()
+{
+var name = document.forms["contactForm"]["fname"];
+var email = document.forms["contactForm"]["email"];
+var subject = document.forms["contactForm"]["subject"];
+var what = document.forms["contactForm"]["message"];
+if (name.value == "" )
+{
+window.alert( "Please enter your name." );
+name.focus();
+return false;
+}
+if (email.value == "" ){
+window.alert( "Please enter a valid e-mail address." );
+email.focus();
+return false ;
+}
+if (email.value.indexOf( "@" , 0) < 0)
+{
+window.alert( "Please enter a valid e-mail address." );
+email.focus();
+return false ;
+}
+if (email.value.indexOf( "." , 0) < 0)
+{
+window .alert( "Please enter a valid e-mail address." );
+email.focus();
+return false ;
+}
+if (subject.value == "" )
+{
+window.alert( "Please enter a subject." );
+subject.focus();
+return false;
+}
+
+if (what.value < 5)
+{
+alert( "Please enter a proper message" );
+what.focus();
+return false ;
+}
+return true ;
+}</script>	
+
+ </body>
+ 
+ 
+ 
+
+</html>
